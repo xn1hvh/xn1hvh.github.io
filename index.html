@@ -30,6 +30,34 @@
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
             border: 1px solid #4a4a8a;
+            position: relative;
+        }
+        
+        .telegram-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0088cc, #006da3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 136, 204, 0.4);
+            z-index: 100;
+        }
+        
+        .telegram-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 136, 204, 0.6);
+        }
+        
+        .telegram-btn img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
         }
         
         header {
@@ -38,6 +66,7 @@
             margin-bottom: 30px;
             border-bottom: 2px solid #6c2bad;
             position: relative;
+            margin-top: 10px;
         }
         
         .logo {
@@ -66,10 +95,118 @@
             font-size: 2rem;
         }
         
-        .tagline {
-            color: #a0a0c0;
-            font-style: italic;
-            margin-top: 10px;
+        .top-download-section {
+            text-align: center;
+            margin: 20px 0 40px;
+            padding: 25px;
+            background: rgba(40, 40, 80, 0.6);
+            border-radius: 15px;
+            border: 2px solid #6c2bad;
+        }
+        
+        .top-download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #8a2be2, #6a0dad);
+            color: white;
+            padding: 18px 45px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(138, 43, 226, 0.5);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .top-download-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.7);
+            background: linear-gradient(135deg, #9b30ff, #7a1fd1);
+        }
+        
+        .instructions-section {
+            background: rgba(40, 40, 80, 0.6);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid #6c2bad;
+        }
+        
+        .instructions-title {
+            color: #9370db;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .instructions-title i {
+            margin-right: 10px;
+        }
+        
+        .instructions-list {
+            list-style-type: none;
+            counter-reset: instruction-counter;
+        }
+        
+        .instructions-list li {
+            padding: 15px 15px 15px 60px;
+            margin-bottom: 10px;
+            background: rgba(30, 30, 60, 0.7);
+            border-radius: 8px;
+            position: relative;
+            border-left: 4px solid #8a2be2;
+        }
+        
+        .instructions-list li::before {
+            content: counter(instruction-counter);
+            counter-increment: instruction-counter;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #8a2be2, #6a0dad);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .video-tutorial {
+            text-align: center;
+            margin-top: 25px;
+            padding: 20px;
+            background: rgba(30, 30, 60, 0.7);
+            border-radius: 10px;
+        }
+        
+        .video-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+        }
+        
+        .video-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.6);
+            background: linear-gradient(135deg, #ff3333, #e60000);
         }
         
         .functions-grid {
@@ -154,25 +291,6 @@
             background: linear-gradient(135deg, #9b30ff, #7a1fd1);
         }
         
-        .download-btn:active {
-            transform: translateY(1px);
-        }
-        
-        .version-info {
-            color: #a0a0c0;
-            font-size: 0.9rem;
-            margin-top: 10px;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 30px 0 10px;
-            margin-top: 40px;
-            border-top: 1px solid #4a4a8a;
-            color: #a0a0c0;
-            font-size: 0.9rem;
-        }
-        
         @media (max-width: 768px) {
             .functions-grid {
                 grid-template-columns: 1fr;
@@ -186,19 +304,73 @@
                 font-size: 1.7rem;
             }
             
-            .download-btn {
-                padding: 12px 30px;
+            .top-download-btn {
+                padding: 15px 35px;
                 font-size: 1.1rem;
+            }
+            
+            .telegram-btn {
+                width: 45px;
+                height: 45px;
+                top: 15px;
+                left: 15px;
+            }
+            
+            .telegram-btn img {
+                width: 25px;
+                height: 25px;
+            }
+            
+            .instructions-list li {
+                padding: 15px 15px 15px 50px;
+            }
+            
+            .instructions-list li::before {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Telegram кнопка -->
+        <a href="https://t.me/xnhvh" class="telegram-btn" target="_blank">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fe7.pngegg.com%2Fpngimages%2F441%2F227%2Fpng-clipart-blue-and-white-icon-illustration-telegram-logo-computer-icons-scalable-graphics-telegram-miscellaneous-blue.png&f=1&ipt=fea9c3fcc2c924c861285227a1ffa59d2c221d77fda05aaab83c37c4a263b8fb" alt="Telegram">
+        </a>
+        
         <header>
             <div class="logo">XNIGHT</div>
             <h1>Game Cheat Functions</h1>
         </header>
+        
+        <!-- Кнопка скачать в начале сайта -->
+        <div class="top-download-section">
+            <h2>Download XNight Cheat</h2>
+            <a href="https://mogd.com" class="top-download-btn" target="_blank">
+                <i class="fas fa-download"></i> Download Now
+            </a>
+        </div>
+        
+        <!-- Инструкция по запуску -->
+        <div class="instructions-section">
+            <h3 class="instructions-title"><i class="fas fa-info-circle"></i> Launch Instructions</h3>
+            <ul class="instructions-list">
+                <li>Launch Steam</li>
+                <li>Launch CS:GO / CS2</li>
+                <li>Set the game to Windowed or Fullscreen Windowed mode</li>
+                <li>Launch the cheat</li>
+            </ul>
+            
+            <div class="video-tutorial">
+                <h3>Video Tutorial</h3>
+                <p>Watch the detailed installation and setup guide</p>
+                <a href="https://youtu.be/E7JnjfH32J4?si=UsVSShMblZK34fN3" class="video-btn" target="_blank">
+                    <i class="fab fa-youtube"></i> Watch Tutorial
+                </a>
+            </div>
+        </div>
         
         <div class="functions-grid">
             <div class="function-category">
@@ -251,30 +423,34 @@
             </div>
         </div>
         
+        <!-- Дополнительная кнопка скачать внизу -->
         <div class="download-section">
-            <h2>Download XNight Cheat</h2>
-            <a href="https://archive.org/download/xnight/xnight.rar" class="download-btn" target="_blank">
-                <i class="fas fa-download"></i> Download Now
+            <h2>Get XNight Now</h2>
+            <a href="https://mogd.com" class="download-btn" target="_blank">
+                <i class="fas fa-download"></i> Download
             </a>
         </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const downloadBtn = document.querySelector('.download-btn');
+            const downloadBtns = document.querySelectorAll('.download-btn, .top-download-btn');
             
-            downloadBtn.addEventListener('click', function() {
-                // Animation effect
-                this.innerHTML = '<i class="fas fa-external-link-alt"></i> Redirecting...';
-                this.style.opacity = '0.8';
-                this.style.cursor = 'not-allowed';
-                
-                // Allow the link to open naturally
-                setTimeout(function() {
-                    downloadBtn.innerHTML = '<i class="fas fa-download"></i> Download Now';
-                    downloadBtn.style.opacity = '1';
-                    downloadBtn.style.cursor = 'pointer';
-                }, 1500);
+            downloadBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Animation effect
+                    const originalHtml = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-external-link-alt"></i> Redirecting...';
+                    this.style.opacity = '0.8';
+                    this.style.cursor = 'not-allowed';
+                    
+                    // Allow the link to open naturally
+                    setTimeout(function() {
+                        btn.innerHTML = originalHtml;
+                        btn.style.opacity = '1';
+                        btn.style.cursor = 'pointer';
+                    }, 1500);
+                });
             });
         });
     </script>
