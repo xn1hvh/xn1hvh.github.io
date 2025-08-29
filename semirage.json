@@ -1,0 +1,77 @@
+{
+    "settings": {
+        "esp_rendering": 1,
+        "esp_mode": 1,
+        "line_rendering": 1,
+        "hp_bar_rendering": 1,
+        "head_hitbox_rendering": 1,
+        "skeleton_rendering": 1,
+        "show_names": 1,
+        "show_weapons": 1,
+        "trigger_bot_enabled": 1,
+        "trigger_bot_min_delay": 0,
+        "trigger_bot_random_delay": 0,
+        "trigger_attack_all": 0,
+        "fov_changer_enabled": 0,
+        "fov_value": 90,
+        "aimbot_enabled": 1,
+        "aimbot_target": 0,
+        "aimbot_fov": 500,
+        "aimbot_smoothness": 4,
+        "noflash_enabled": 0,
+        "noflash_intensity": 0.0,
+        "noflash_use_slider": 1,
+        "enemy_color": [
+            1.0,
+            0.0,
+            0.0
+        ],
+        "ally_color": [
+            0.0,
+            1.0,
+            0.0
+        ],
+        "head_hitbox_color": [
+            1.0,
+            1.0,
+            0.0
+        ],
+        "skeleton_color": [
+            1.0,
+            0.0,
+            1.0
+        ],
+        "bind_aim_key": "Mouse4",
+        "bind_trigger_key": "Mouse4",
+        "bind_esp_key": "F3",
+        "bind_menu_key": "Insert",
+        "update_settings": true
+    },
+    "switches": {
+        "esp": 1,
+        "esp_mode": 1,
+        "line": 1,
+        "hp_bar": 1,
+        "head_hitbox": 1,
+        "skeleton": 1,
+        "show_names": 1,
+        "show_weapons": 1,
+        "trigger_bot": 1,
+        "trigger_attack_all": 0,
+        "fov_changer": 0,
+        "aimbot": 1,
+        "noflash": 0
+    },
+    "colors": {
+        "enemy": "FF0000",
+        "ally": "00FF00",
+        "head_hitbox": "FFFF00",
+        "skeleton": "FF00FF"
+    },
+    "binds": {
+        "aim_key": "Mouse4",
+        "trigger_key": "Mouse4",
+        "esp_key": "F3",
+        "menu_key": "Insert"
+    }
+}
