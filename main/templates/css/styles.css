@@ -1,0 +1,689 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXX3I6Li01BKofIMNaORs71cA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXX3I6Li01BKofIMNaHRs71cA.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXX3I6Li01BKofIMNaMRs71cA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXX3I6Li01BKofIMNaNRs71cA.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXX3I6Li01BKofIMNaDRs4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOOaBXso.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIMeaBXso.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOuaBXso.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIO-aBXso.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaB.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Остальные @font-face правила остаются без изменений */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXX3I6Li01BKofIMNaORs71cA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXX3I6Li01BKofIMNaHRs71cA.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXX3I6Li01BKofIMNaMRs71cA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXX3I6Li01BKofIMNaNRs71cA.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXX3I6Li01BKofIMNaDRs4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOOaBXso.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIMeaBXso.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIOuaBXso.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIO-aBXso.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaB.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Nunito", sans-serif !important;
+    color: var(--color-white);
+    font-weight: 500;
+    background-color: #19141B;
+    background-image: url(../img/index_bg.png);
+    background-position: top;
+    background-size: 100% auto;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 0;
+}
+
+::-webkit-scrollbar-track {
+    background: #1d1d1d;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C06868;
+    transition: .3s;
+    border-radius: 0px;
+}
+
+::selection {
+    color: #fff;
+    background: #C06868;
+}
+
+ul.navbar-nav li.nav-item {
+    position: relative;
+    margin: 0 5px;
+    height: 100%;
+    font-family: "Nunito", sans-serif !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.navbar-nav li.nav-item.big {
+    position: relative;
+    margin: 0 5px;
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.navbar-nav li.nav-item a.nav-link {
+    color: white;
+    font-size: 14px;
+    font-family: "Nunito", sans-serif !important;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .35s;
+}
+
+ul.navbar-nav li.nav-item a.nav-link:hover {
+    color: #C06868;
+}
+
+ul.navbar-nav li.nav-item.big a.nav-link:hover{
+    box-shadow: 0 0 30px -10px #C06868;
+    background-color: rgba(192, 104, 104, 0.1);
+    border: 1px solid #C06868;
+}
+
+ul.navbar-nav li.nav-item a.nav-link i {
+    margin: 0px;
+}
+
+@media(max-width: 767px) {
+    ul.navbar-nav li.nav-item a.nav-link {
+        text-align:center;
+    }
+}
+
+.navbar-brand {
+    display: flex!important;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header__logo-img img {
+    height: 60px;
+    margin: 10px;
+}
+
+.header__logo-text {
+    font-size: 24px;
+    color: white;
+    font-weight: 900;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+#header1 {
+    background: url(../img/header_bg.png);
+    image-rendering: pixelated;
+    min-height: 800px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    #header1 {
+        background: 0 0;
+        min-height: 300px;
+    }
+}
+
+.header_title{
+    font-size: 40px;
+    color: white;
+    font-weight: 900;
+}
+
+.header_text{
+    font-size: 15px;
+    color: white;
+    
+}
+
+#header_index .header_btn {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 15px 0 0;
+}
+
+#header_index .header_btn a{
+    color: #fff;
+    border: 1px solid #C06868;
+    background: rgba(192, 104, 104, 0.1);
+    font-size: 12px;
+    font-weight: 600;
+    transition: .25s;
+    font-weight: 800;
+    backdrop-filter: blur(10px);
+    height: 50px;
+    width: 190px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: .5px;
+    position: relative;
+    margin: 10px 10px 10px 0;
+    cursor: pointer;
+}
+
+#header_index .header_btn a:hover{
+    background: #C06868;
+}
+
+.top-100{
+    padding-top: 50px;
+}
+
+.container_title_top{
+    font-size: 30px;
+    color: #C06868;
+    font-weight: 700;
+}
+
+.container_title_bot{
+    font-size: 30px;
+    color:white;
+    font-weight: 900;
+}
+
+.top-50{
+    padding-top: 50px;
+}
+
+.top-100{
+    padding-top: 100px;
+}
+
+.advantages-flex .advantage-card .number {
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    width: 60px;
+    height: 60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#C06868;
+    -webkit-border-radius: 20px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius: 20px;
+    -moz-border-radius-bottomright: 10px;
+    border-radius: 20px;
+    border-bottom-right-radius: 10px;
+    font-size:25px;
+}
+
+.advantages-flex {
+    padding-top:0;
+    display:block;
+    margin-top:35px;
+    user-select: none;
+}
+
+.advantages-flex .advantage-card .title {
+    font-weight: 800;
+    font-size: 24px;
+    margin:0 0 5px;
+    user-select: none;
+}
+
+.advantages-flex .advantage-card .discription {
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing:.5px;
+    text-align: left;
+    user-select: none;
+}
+
+.advantages-flex .advantage-card .text {
+    color:#fff;
+    background: rgba(192, 104, 104, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid #C06868;
+    padding: 40px 75px;
+    text-align: left;
+    position: relative;
+    font-size: 17px;
+    border-radius: 20px;
+    user-select:none;
+    
+}
+
+.functionality_card{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+.functionality_card img{
+    border: 1px solid #C06868;
+    -webkit-border-radius: 20px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius: 20px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    user-select: none;
+}
+
+.functionality_card .functionality_text{
+    color: white;
+    margin-top: 15px;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-weight: 500;
+    user-select: none;
+}
+
+.social_card{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+.social_card img{
+    border: 1px solid #C06868;
+    -webkit-border-radius: 20px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius: 20px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    user-select: none;
+}
+
+.social_card .social_text{
+    color: white;
+    margin-top: 15px;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-weight: 500;
+    user-select: none;
+}
+
+#footer{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+.footer_block {
+    margin: 20px 0;
+}
+
+.footer_block .footer_block_1_text_1 {
+    color: #C06868;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 5px;
+}
+
+.footer_block .footer_block_1_text_2 {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 5px;
+}
+
+.footer_block .footer_block_1_text_2 a {
+    color: #fff;
+    transition: .25s;
+}
+
+.footer_block .footer_block_1_text_2 a:hover {
+    color: #C06868;
+    transition: .25s;
+}
+
+.footer_block .footer_block_1_text_1 a i{
+    color: white;
+}
+
+.footer_block .footer_block_social a {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 10px 0 0;
+    transition: .25s;
+}
+
+.footer_block .footer_block_social a:hover {
+    color: #C06868;
+    font-size: 18px;
+    margin: 0 10px 0 0;
+    transition: .25s;
+}
+
+.functionality_card img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    font-size: 25px;
+    color: #fff;
+    background: #C06868;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.8s;
+}
+   
+.back-to-top:hover {
+    background: #A85656;
+    text-decoration: none;
+    color: white;
+}
+
+.modal-title{
+    color: #C06868;
+}
+
+.modal-body #modalImage{
+    border-radius: 10px;
+}
+
+/* Стили для модального окна VPN */
+.modal-custom {
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+.modal-header {
+    border-bottom: 1px solid #444;
+}
+
+.modal-footer {
+    border-top: 1px solid #444;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-vpn {
+    background-color: #C06868;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-vpn:hover {
+    background-color: #A85656;
+}
+
+/* Улучшенный стиль модального окна */
+.modal-custom {
+    background: #141414;
+    color: #ffffff;
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #C06868;
+    box-shadow: 0px 0px 15px rgba(192, 104, 104, 0.5);
+}
+
+.modal-header {
+    border-bottom: 1px solid #C06868;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffbaba;
+}
+
+.modal-header .close {
+    color: #ffbaba;
+    font-size: 22px;
+}
+
+.modal-body {
+    font-size: 16px;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.modal-footer {
+    border-top: 1px solid #C06868;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.btn-vpn {
+    background: linear-gradient(135deg, #D86A6A, #C06868);
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border: none;
+}
+
+.btn-vpn:hover {
+    background: linear-gradient(135deg, #C06868, #A85656);
+    box-shadow: 0px 0px 10px rgba(192, 104, 104, 0.8);
+}
