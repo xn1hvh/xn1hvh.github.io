@@ -1,458 +1,318 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XNight - Game Cheat Functions</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 100%);
-            color: #e6e6e6;
-            line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
-            background-attachment: fixed;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: rgba(20, 20, 40, 0.9);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-            border: 1px solid #4a4a8a;
-            position: relative;
-        }
-        
-        .telegram-btn {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0088cc, #006da3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 136, 204, 0.4);
-            z-index: 100;
-        }
-        
-        .telegram-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 16px rgba(0, 136, 204, 0.6);
-        }
-        
-        .telegram-btn img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-        }
-        
-        header {
-            text-align: center;
-            padding: 20px 0;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #6c2bad;
-            position: relative;
-            margin-top: 10px;
-        }
-        
-        .logo {
-            font-size: 3.5rem;
-            font-weight: bold;
-            color: #8a2be2;
-            text-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-        }
-        
-        .logo::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #8a2be2, transparent);
-        }
-        
-        h1 {
-            color: #9370db;
-            margin-bottom: 15px;
-            font-size: 2rem;
-        }
-        
-        .top-download-section {
-            text-align: center;
-            margin: 20px 0 40px;
-            padding: 25px;
-            background: rgba(40, 40, 80, 0.6);
-            border-radius: 15px;
-            border: 2px solid #6c2bad;
-        }
-        
-        .top-download-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #8a2be2, #6a0dad);
-            color: white;
-            padding: 18px 45px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            margin-top: 15px;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 18px rgba(138, 43, 226, 0.5);
-            border: none;
-            cursor: pointer;
-        }
-        
-        .top-download-btn:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.7);
-            background: linear-gradient(135deg, #9b30ff, #7a1fd1);
-        }
-        
-        .instructions-section {
-            background: rgba(40, 40, 80, 0.6);
-            padding: 25px;
-            border-radius: 15px;
-            margin: 30px 0;
-            border: 2px solid #6c2bad;
-        }
-        
-        .instructions-title {
-            color: #9370db;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .instructions-title i {
-            margin-right: 10px;
-        }
-        
-        .instructions-list {
-            list-style-type: none;
-            counter-reset: instruction-counter;
-        }
-        
-        .instructions-list li {
-            padding: 15px 15px 15px 60px;
-            margin-bottom: 10px;
-            background: rgba(30, 30, 60, 0.7);
-            border-radius: 8px;
-            position: relative;
-            border-left: 4px solid #8a2be2;
-        }
-        
-        .instructions-list li::before {
-            content: counter(instruction-counter);
-            counter-increment: instruction-counter;
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 35px;
-            height: 35px;
-            background: linear-gradient(135deg, #8a2be2, #6a0dad);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-        
-        .video-tutorial {
-            text-align: center;
-            margin-top: 25px;
-            padding: 20px;
-            background: rgba(30, 30, 60, 0.7);
-            border-radius: 10px;
-        }
-        
-        .video-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff0000, #cc0000);
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            margin-top: 15px;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
-        }
-        
-        .video-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.6);
-            background: linear-gradient(135deg, #ff3333, #e60000);
-        }
-        
-        .functions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .function-category {
-            background: rgba(30, 30, 60, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-            border-left: 4px solid #6c2bad;
-        }
-        
-        .category-title {
-            color: #9370db;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #4a4a8a;
-            display: flex;
-            align-items: center;
-        }
-        
-        .category-title i {
-            margin-right: 10px;
-        }
-        
-        .functions-list {
-            list-style-type: none;
-        }
-        
-        .functions-list li {
-            padding: 10px 0;
-            padding-left: 30px;
-            position: relative;
-            border-bottom: 1px solid rgba(74, 74, 138, 0.3);
-        }
-        
-        .functions-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .functions-list li::before {
-            content: "➜";
-            color: #8a2be2;
-            position: absolute;
-            left: 10px;
-        }
-        
-        .download-section {
-            text-align: center;
-            margin: 40px 0 20px;
-            padding: 20px;
-            background: rgba(40, 40, 80, 0.6);
-            border-radius: 10px;
-            border: 1px solid #6c2bad;
-        }
-        
-        .download-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #8a2be2, #6a0dad);
-            color: white;
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            margin-top: 15px;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
-            border: none;
-            cursor: pointer;
-        }
-        
-        .download-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(138, 43, 226, 0.6);
-            background: linear-gradient(135deg, #9b30ff, #7a1fd1);
-        }
-        
-        @media (max-width: 768px) {
-            .functions-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .logo {
-                font-size: 2.5rem;
-            }
-            
-            h1 {
-                font-size: 1.7rem;
-            }
-            
-            .top-download-btn {
-                padding: 15px 35px;
-                font-size: 1.1rem;
-            }
-            
-            .telegram-btn {
-                width: 45px;
-                height: 45px;
-                top: 15px;
-                left: 15px;
-            }
-            
-            .telegram-btn img {
-                width: 25px;
-                height: 25px;
-            }
-            
-            .instructions-list li {
-                padding: 15px 15px 15px 50px;
-            }
-            
-            .instructions-list li::before {
-                width: 30px;
-                height: 30px;
-                font-size: 1rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- Telegram кнопка -->
-        <a href="https://t.me/xnhvh" class="telegram-btn" target="_blank">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fe7.pngegg.com%2Fpngimages%2F441%2F227%2Fpng-clipart-blue-and-white-icon-illustration-telegram-logo-computer-icons-scalable-graphics-telegram-miscellaneous-blue.png&f=1&ipt=fea9c3fcc2c924c861285227a1ffa59d2c221d77fda05aaab83c37c4a263b8fb" alt="Telegram">
-        </a>
-        
-        <header>
-            <div class="logo">XNIGHT</div>
-            <h1>Game Cheat Functions</h1>
-        </header>
-        
-        <!-- Кнопка скачать в начале сайта -->
-        <div class="top-download-section">
-            <h2>Download XNight Cheat</h2>
-            <a href="https://mogd.com" class="top-download-btn" target="_blank">
-                <i class="fas fa-download"></i> Download Now
-            </a>
-        </div>
-        
-        <!-- Инструкция по запуску -->
-        <div class="instructions-section">
-            <h3 class="instructions-title"><i class="fas fa-info-circle"></i> Launch Instructions</h3>
-            <ul class="instructions-list">
-                <li>Launch Steam</li>
-                <li>Launch CS:GO / CS2</li>
-                <li>Set the game to Windowed or Fullscreen Windowed mode</li>
-                <li>Launch the cheat</li>
-            </ul>
-            
-            <div class="video-tutorial">
-                <h3>Video Tutorial</h3>
-                <p>Watch the detailed installation and setup guide</p>
-                <a href="https://youtu.be/E7JnjfH32J4?si=UsVSShMblZK34fN3" class="video-btn" target="_blank">
-                    <i class="fab fa-youtube"></i> Watch Tutorial
-                </a>
-            </div>
-        </div>
-        
-        <div class="functions-grid">
-            <div class="function-category">
-                <h3 class="category-title"><i class="fas fa-crosshairs"></i> Aimbot</h3>
-                <ul class="functions-list">
-                    <li>Wallhack targeting</li>
-                    <li>Adjustable target switching speed</li>
-                    <li>Customizable FOV (Field of View)</li>
-                    <li>Target selection: head or body</li>
-                </ul>
-            </div>
-            
-            <div class="function-category">
-                <h3 class="category-title"><i class="fas fa-bullseye"></i> Trigger Bot</h3>
-                <ul class="functions-list">
-                    <li>Auto-shoot when target is locked</li>
-                    <li>Adjustable activation speed</li>
-                </ul>
-            </div>
-            
-            <div class="function-category">
-                <h3 class="category-title"><i class="fas fa-eye"></i> ESP</h3>
-                <ul class="functions-list">
-                    <li>Wallhack enemy visibility</li>
-                    <li>Teammate indicators</li>
-                    <li>Direction lines to enemies</li>
-                    <li>Health bars</li>
-                    <li>Head hitboxes</li>
-                    <li>Skeleton outlines</li>
-                    <li>Player name tags</li>
-                </ul>
-            </div>
-            
-            <div class="function-category">
-                <h3 class="category-title"><i class="fas fa-palette"></i> Color Customization</h3>
-                <ul class="functions-list">
-                    <li>Enemy color settings</li>
-                    <li>Teammate color settings</li>
-                    <li>Head hitbox color</li>
-                    <li>Skeleton color</li>
-                </ul>
-            </div>
-            
-            <div class="function-category">
-                <h3 class="category-title"><i class="fas fa-sliders-h"></i> Additional Features</h3>
-                <ul class="functions-list">
-                    <li>FOV Changer (in-game FOV adjustment)</li>
-                    <li>Anti Flash (flashbang protection)</li>
-                </ul>
-            </div>
-        </div>
-        
-        <!-- Дополнительная кнопка скачать внизу -->
-        <div class="download-section">
-            <h2>Get XNight Now</h2>
-            <a href="https://mogd.com" class="download-btn" target="_blank">
-                <i class="fas fa-download"></i> Download
-            </a>
-        </div>
-    </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const downloadBtns = document.querySelectorAll('.download-btn, .top-download-btn');
-            
-            downloadBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Animation effect
-                    const originalHtml = this.innerHTML;
-                    this.innerHTML = '<i class="fas fa-external-link-alt"></i> Redirecting...';
-                    this.style.opacity = '0.8';
-                    this.style.cursor = 'not-allowed';
-                    
-                    // Allow the link to open naturally
-                    setTimeout(function() {
-                        btn.innerHTML = originalHtml;
-                        btn.style.opacity = '1';
-                        btn.style.cursor = 'pointer';
-                    }, 1500);
-                });
-            });
-        });
+<meta name="author" content="nevlp">
+<meta name="keywords" content="кс 2, cs2, cs 2, CS2, CS 2, xnight, luno cs2, луно чит, чит луно, xnight cs2 cheat, лучший чит, Чит для CS2, читы CS2, чит на CS2, Чит для CS2, читы для кс2, читы, чит кс2, чит, luno чит, читы на кс го, ,бесплатный чит, чит для CS 2, шаркхак кс2 чит, freeqn, spirthack, neverlose, midnight, миднайт, ichanger, sapphire changer, сапфир скины, сапфир инвентарь, xone читы, inventory changer, миднайт чит, миднайт чит кс го, миднайт чит кс2, xone, чит cs2, freeqnnet, CS 2 CHEAT, multihack, чит, скины, wh, aimbot, инвентарь, danger zone, запретная зона, читы для ксго, luno,neverlose,skeet,gamesanse,crack,xnight,xnight">
+<meta name="description" content="Бесплатный чит cs2">
+<link rel="stylesheet" href="main/templates/css/styles.css">
+<link rel="stylesheet" href="main/templates/css/font.css">
+<link rel="stylesheet" href="main/templates/css/bootstrap.css">
+<link rel="stylesheet" href="main/templates/css/animate.css">
+<link rel="icon" href="main/templates/img/logo.png" type="image/x-icon">
+<script src="main/templates/js/bootstrap.min.js"></script>
+<script src="main/templates/js/jQuery.js"></script>
+<script src="main/templates/js/lalala.js"></script>
+<script src="main/templates/js/anim.js"></script>
+<script src="main/templates/js/jquery-3.2.1.min.js"></script>
+<script src="https://kit.fontawesome.com/c2ee9cd28b.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>xnight — бесплатный чит для CS2, скачать бесплатный чит КС-2</title>
+
+
+
+
+<body>
+     <a href="index.html#top" id="back-to-top" class="back-to-top" title="Back to top">▲</a>
+<div id="header" class="wow fadeInUp">
+<div class="container">
+<div class="row">
+<nav class="navbar navbar-expand-md bg-transparent w-100">
+<a class="navbar-brand lt-110" href="index.html">
+<div class="header__logo-img">
+<img src="main/templates/img/logo-header.png">
+</div>
+<div class="header__logo-text">
+xnight
+</div>
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<i class="fas fa-bars"></i>
+</button>
+<div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+<ul class="navbar-nav ml-auto font-medium w-100 lt-110" name="menu">
+<li class="nav-item"><a class="nav-link" href="index.html#main">ГЛАВНАЯ</a>
+</li>
+<li class="nav-item"><a class="nav-link" href="index.html#advantages">ПРЕИМУЩЕСТВА</a>
+</li>
+<li class="nav-item"><a class="nav-link" href="index.html#instruction">ИНСТРУКЦИЯ</a>
+</li>
+<li class="nav-item"><a class="nav-link" href="index.html#functionality">ФУНКЦИОНАЛ</a>
+</li>
+<li class="nav-item"><a class="nav-link" href="index.html#social">СОЦ. СЕТИ</a></li>
+
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+<main>
+<section id="header1" name="header" class="">
+<div class="container">
+<div class="row pluss-row" id="header_index">
+<div class="col col-12 col-md-6">
+</div>
+<div class="col col-12 col-md-6">
+<div class="header_title wow fadeInUp"><div>xnight - Бесплатный Чит на CS-2</div></div>
+<div class="header_text wow fadeInUp">Представляем xnight - уникальный чит для Counter-Strike 2, обладающий широким функционалом и легкой настройкой, а также быстрой и отзывчивой техподдержкой.</div>
+<div class="header_btn">
+<a href="xn.exe" class="wow fadeInLeft download-btn">СКАЧАТЬ Loader ЧИТА</a>
+<a onclick="configs()" class="wow fadeInRight">СКАЧАТЬ НАСТРОЙКИ</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="advantages" name="advantages" class="top-50">
+<div class="container">
+<div class="container-title wow fadeInUp">
+<div class="container_title_top">НАШИ</div>
+<div class="container_title_bot">ПРЕИМУЩЕСТВА</div>
+</div>
+<div class="advantages-flex container" id="">
+<div class="row pluss-row">
+<div class="col col-12">
+<div class="advantage-card wow fadeInUp">
+<div class="text">
+<div class="number">1</div>
+<div class="title">Гибкость настройки чита </div>
+
+</div>
+</div>
+</div>
+<div class="advantages-flex container" id="">
+<div class="row pluss-row">
+<div class="col col-12">
+<div class="advantage-card wow fadeInUp">
+<div class="text">
+<div class="number">2</div>
+<div class="title">Постоянные обновления</div>
+
+<div class="advantages-flex container" id="">
+<div class="row pluss-row">
+<div class="col col-12">
+<div class="advantage-card wow fadeInUp">
+<div class="text">
+<div class="number">3</div>
+<div class="title">Автоматическое принятии активированых функции</div>
+
+</div>
+</div>
+</div>
+<div class="advantages-flex container" id="">
+<div class="row pluss-row">
+<div class="col col-12">
+<div class="advantage-card wow fadeInUp">
+<div class="text">
+
+</div>
+</div>
+</div>
+</section>
+<section id="instruction" name="instruction" class="top-100">
+<div class="container">
+<div class="container-title wow fadeInUp">
+<div class="container_title_top">КРАТКАЯ</div>
+<div class="container_title_bot">ИНСТРУКЦИЯ</div>
+</div>
+<div class="advantages-flex container" id="">
+<div class="row pluss-row">
+<div class="col col-12">
+<div class="advantage-card wow fadeInUp">
+<div class="text">
+<div class="number">1</div>
+<div class="title">Loader</div>
+<div class="discription">Скачайте Loader чита на кс-2 бесплатно всего в 1 клик! Очень просто нажимаете “Скачать Loader” у вас устанавливается приложение, которое мы будем с вами запускать.</div>
+</div>
+</div>
+</div>
+<div class="advantages-flex container" id="">
+<div class="row pluss-row">
+<div class="col col-12">
+<div class="advantage-card wow fadeInUp">
+<div class="text">
+<div class="number">2</div>
+<div class="title">Запуск</div>
+<div class="discription">Приложение запускается очень просто! Первым делом запускаем наш чит от имени администратора, запускаем steam  а потом cs и все.</div>
+</div>
+</div>
+</div>
+<div class="advantages-flex container" id="">
+<div class="row pluss-row">
+<div class="col col-12">
+<div class="advantage-card wow fadeInUp">
+<div class="text">
+<div class="number">3</div>
+<div class="title">Настройки</div>
+<div class="discription">Скачать настройки очень просто! Нажимаем “Готовые настройки” скачиваются готовые настройки от админа xnight. Переносим в папку на диске C:\xn . В игре нажимаем на настройки и загружаем. Profit.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="functionality" name="functionality" class="top-100">
+<div class="container">
+<div class="container-title wow fadeInUp">
+<div class="container_title_top">ФУНКЦИОНАЛ</div>
+<div class="container_title_bot">ЧИТА</div>
+</div>
+<div class="row pluss-row">
+<div class="col col-12 col-md-4">
+<div class="functionality_card wow fadeInUp">
+<img src="main/templates/img/aim.png" alt="#" class="wow fadeInLeft" alt="Image 1" class="img-fluid" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+<div class="functionality_text">Aimbot</div>
+</div>
+</div>
+<div class="col col-12 col-md-4">
+<div class="functionality_card wow fadeInUp">
+<img src="main/templates/img/esp.png" alt="#" class="center wow fadeInLeft" alt="Image 1" class="img-fluid" data-toggle="modal" data-target="#imageModal" onclick="openModal(this)">
+<div class="functionality_text">ESP</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="social" name="social" class="top-100">
+<div class="container">
+<div class="container-title wow fadeInUp">
+<div class="container_title_top">НАШИ</div>
+<div class="container_title_bot">СОЦИАЛЬНЫЕ СЕТИ</div>
+</div>
+<div class="row pluss-row">
+<div class="col col-12 col-md-4">
+<div class="social_card">
+<a href="https://t.me/xnhvh" target="_blank"><img src="main/templates/img/social_tg.png" alt="#" class="wow fadeInLeft"></a>
+<div class="social_text">Телеграм</div>
+</div>
+</div>
+<div class="col col-12 col-md-4">
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="container" id="footer">
+<div class="row pluss-row">
+<div class="col col-12 col-md-4">
+<div class="footer_block">
+<div class="footer_block_1_text_1">xnight Software</div>
+
+</div>
+</div>
+<div class="col col-12 col-md-4">
+<div class="footer_block">
+
+</div>
+<div class="col col-12 col-md-4">
+<div class="footer_block">
+<div class="footer_block_1_text_1">Социальные сети:</div>
+<div class="footer_block_social">
+<a href="https://t.me/xnhvh" target="_blank"><i class="fab fa-vk"></i></a>
+<a href="https://t.me/xnhvh" target="_blank"><i class="fa-brands fa-safari"></i>
+<a href="https://t.me/xnhvh" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+ <!-- Модальное окно -->
+ <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h5 class="modal-title" id="imageModalLabel">ИЗОБРАЖЕНИЕ</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                 </button>
+             </div>
+             <div class="modal-body">
+                 <img id="modalImage" src="index.html" alt="" class="img-fluid">
+             </div>
+         </div>
+     </div>
+ </div>
+
+<script>
+     function openModal(image) {
+         const modalImage = document.getElementById('modalImage');
+         modalImage.src = image.src; // Устанавливаем источник изображения в модальном окне
+     }
+</script>
+<script src="main/templates/js/wow.min.js"></script>
+<script>
+     new WOW().init();
+</script>
+
+
+ <script type="text/javascript"
+ let container = document.querySelector(''container');
+ function checkScroll() 
+     const rect = container.getBoundingClientRect();
+     const windowHeight = window.innerHeight;
+
+     if rect.top <= windowHeight && rect.bottom >= 0 {
+         // Добавляем класс анимации
+         container.classList.add('fadeInUp');
+     } else {
+         // Удаляем класс анимации, чтобы она сработала снова при повторном скролле
+         container.classList.remove('fadeInUp');
+     }
+ 
+ // Слушаем событие прокрутки
+ window.addEventListener('scroll', checkScroll);
+ 
+ // Проверяем при загрузке страницы
+ checkScroll();
+
     </script>
+<script src="main/templates/js/anim.js"></script>
+<script src="main/templates/js/lalala.js"></script>
+<script src="main/templates/js/bootstrap.min.js"></script>
+<script src="main/templates/js/jQuery.js"></script>
+<script src="main/templates/js/jquery-3.2.1.min.js"></script>    
+
+<!-- Скрипт для показа модального окна после начала скачивания -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.download-btn').on('click', function (event) {
+            event.preventDefault(); // Останавливаем стандартное действие ссылки
+
+            // Начинаем скачивание
+            let downloadUrl = "xnight.exe";
+            let link = document.createElement("a");
+            link.href = downloadUrl;
+            link.download = "xnight.exe"; // Имя файла при скачивании
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+  
+</script>
+
+
 </body>
 </html>
